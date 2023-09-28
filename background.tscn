@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0m52sqcb2x3i"]
+
+[ext_resource type="Script" path="res://sky.gd" id="1_a41v5"]
+[ext_resource type="Texture2D" uid="uid://csi8mwd6axwoa" path="res://asset/parallax-20230914T022441Z-001/parallax/parallax-00.png" id="2_txf7k"]
+[ext_resource type="Script" path="res://ParallaxLayer2.gd" id="3_7w3bx"]
+[ext_resource type="Texture2D" uid="uid://cyivd2hhvm3m4" path="res://asset/parallax-20230914T022441Z-001/parallax/parallax-01.png" id="3_n4dki"]
+[ext_resource type="Texture2D" uid="uid://cffa7txswvsa1" path="res://asset/parallax-20230914T022441Z-001/parallax/parallax-02.png" id="4_osaht"]
+[ext_resource type="Texture2D" uid="uid://d0067rbmfge4x" path="res://asset/parallax-20230914T022441Z-001/parallax/parallax-03.png" id="5_c8gxp"]
+[ext_resource type="Script" path="res://ParallaxLayer3.gd" id="5_k7w8n"]
+[ext_resource type="Texture2D" uid="uid://dlnmocru8ylcn" path="res://asset/parallax-20230914T022441Z-001/parallax/parallax-04.png" id="6_ipcj8"]
+[ext_resource type="Script" path="res://ParallaxLayer5.gd" id="7_3v4tr"]
+[ext_resource type="Script" path="res://ParallaxLayer4.gd" id="8_of71t"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="sky" type="ParallaxLayer" parent="."]
+script = ExtResource("1_a41v5")
+
+[node name="Sprite2D" type="Sprite2D" parent="sky"]
+
+[node name="Parallax-00" type="Sprite2D" parent="sky/Sprite2D"]
+position = Vector2(719, 182)
+texture = ExtResource("2_txf7k")
+
+[node name="Parallax-01" type="Sprite2D" parent="sky/Sprite2D"]
+position = Vector2(2159, 182)
+texture = ExtResource("2_txf7k")
+
+[node name="Parallax-02" type="Sprite2D" parent="sky/Sprite2D"]
+position = Vector2(1438, 364)
+texture = ExtResource("2_txf7k")
+
+[node name="Parallax-03" type="Sprite2D" parent="sky/Sprite2D"]
+position = Vector2(-721, 175)
+texture = ExtResource("2_txf7k")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+script = ExtResource("3_7w3bx")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+
+[node name="Parallax-01" type="Sprite2D" parent="ParallaxLayer2/Sprite2D"]
+position = Vector2(2159, 179)
+texture = ExtResource("3_n4dki")
+
+[node name="Parallax-02" type="Sprite2D" parent="ParallaxLayer2/Sprite2D"]
+position = Vector2(723, 181)
+texture = ExtResource("3_n4dki")
+
+[node name="Parallax-03" type="Sprite2D" parent="ParallaxLayer2/Sprite2D"]
+position = Vector2(1227, -333)
+texture = ExtResource("3_n4dki")
+
+[node name="Parallax-04" type="Sprite2D" parent="ParallaxLayer2/Sprite2D"]
+position = Vector2(-882, -503)
+texture = ExtResource("3_n4dki")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+script = ExtResource("5_k7w8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+
+[node name="Parallax-02" type="Sprite2D" parent="ParallaxLayer3/Sprite2D"]
+position = Vector2(2158, 276)
+texture = ExtResource("4_osaht")
+
+[node name="Parallax-03" type="Sprite2D" parent="ParallaxLayer3/Sprite2D"]
+position = Vector2(-501, 785)
+texture = ExtResource("4_osaht")
+
+[node name="Parallax-04" type="Sprite2D" parent="ParallaxLayer3/Sprite2D"]
+position = Vector2(-722, 280)
+texture = ExtResource("4_osaht")
+
+[node name="Parallax-05" type="Sprite2D" parent="ParallaxLayer3/Sprite2D"]
+position = Vector2(719, 280)
+texture = ExtResource("4_osaht")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+script = ExtResource("7_3v4tr")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+script = ExtResource("8_of71t")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+
+[node name="Parallax-03" type="Sprite2D" parent="ParallaxLayer4/Sprite2D"]
+position = Vector2(714, 325)
+texture = ExtResource("5_c8gxp")
+
+[node name="Parallax-04" type="Sprite2D" parent="ParallaxLayer4/Sprite2D"]
+position = Vector2(2156, 320)
+texture = ExtResource("5_c8gxp")
+
+[node name="Parallax-05" type="Sprite2D" parent="ParallaxLayer4/Sprite2D"]
+position = Vector2(751, 763)
+texture = ExtResource("6_ipcj8")
+
+[node name="Parallax-06" type="Sprite2D" parent="ParallaxLayer4/Sprite2D"]
+position = Vector2(2191, 740)
+texture = ExtResource("6_ipcj8")

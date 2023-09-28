@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bugs2t6glcdt4"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_sep0b"]
+[ext_resource type="Texture2D" uid="uid://cww13u2rgbslp" path="res://asset/bg.jpg" id="2_rweqw"]
+[ext_resource type="AudioStream" uid="uid://cib8ph3xpgkv4" path="res://asset/8-bit-background-music-for-arcade-game-come-on-mario-164702.mp3" id="3_mtvk3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_sep0b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 327)
+scale = Vector2(1.12305, 1.00313)
+texture = ExtResource("2_rweqw")
+
+[node name="MarginContainer" type="MarginContainer" parent="Sprite2D"]
+offset_left = -158.0
+offset_top = 121.0
+offset_right = 185.0
+offset_bottom = 241.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Sprite2D/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Sprite2D/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 460.0
+offset_top = 237.0
+offset_right = 712.0
+offset_bottom = 277.0
+text = "               Welcome Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mtvk3")
+autoplay = true
+
+[connection signal="button_up" from="Sprite2D/MarginContainer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_button_up"]
